@@ -113,11 +113,11 @@
   ​
   	    $.post(currentURL + "/api/tables", newReservation,
   	    function(data){
-			  if(reservationList <= 5){
-				  newReservation.push(currnetReservation);
-			  }else{
-				  newReservation.push(waitList)
-			  }
+			
+  // $.post( "ajax/reserve.html", function( data ) {
+  //   $( ".result" ).html( data );
+  // });
+  
   	    	// If a table is available... tell user they are booked.
   	    	if(data == true){
   	    		alert("Yay! You are officially booked!")

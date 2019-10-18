@@ -45,10 +45,6 @@ let resevationList = [{
   app.get("/api/tables", function(req, res) {
     return res.json(resevationList)
   });
-  // $.post( "ajax/reserve.html", function( data ) {
-  //   $( ".result" ).html( data );
-  // });
-  
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
