@@ -15,17 +15,22 @@ let waitList = [
     customerId: "5"
     }
 ];
-let resevationList = [];
+let resevationList = [{
+  customerName: "bob",
+  phoneNumber: 125-345-6654,
+  customerEmail: "bob@gmail.com",
+  customerId: "6"
+  }];
 
  app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
   });
 
-  app.get("/reserve", function(req, res) {
+  app.get("/resteraunt/reserve", function(req, res) {
     res.sendFile(path.join(__dirname, "reserve.html"));
   });
 
-  app.get("/table", function(req, res) {
+  app.get("/resteraunt/tables", function(req, res) {
     res.sendFile(path.join(__dirname, "tables.html"));
   });
 
@@ -33,7 +38,7 @@ let resevationList = [];
     return res.json(waitList)
   });
 
-  app.get("/api/reservationlist", function(req, res) {
+  app.get("/api/tables", function(req, res) {
     return res.json(resevationList)
   });
 
