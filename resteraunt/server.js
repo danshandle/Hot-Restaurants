@@ -36,9 +36,7 @@ let resevationList = [];
   app.get("/api/reservationlist", function(req, res) {
     return res.json(resevationList)
   });
-
-
-
+  
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
